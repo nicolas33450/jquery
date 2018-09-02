@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+    
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit . Aperiam eveniet atque quae nostrum officiis ex dignissimos
+        ipsum rerum accusamus numquam omnis voluptas, suscipit vero, illo rem, a laboriosam eius sequi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi impedit ipsam eum voluptas laudantium dolorum nesciunt
+        sequi minima nobis quia hic numquam inventore a sit, quis quibusdam! Vitae, unde magni.</p>
+
+    <span id="msg"></span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('p').on('click mouseover mouseout', function(e){
+                $('#msg').text('evenement declenche : ' + e.type);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

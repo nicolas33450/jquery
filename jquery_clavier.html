@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+
+    <label for="prenom"> Entrez votre prénom </label>
+    <input type="text" id="prenom" name="prenom">
+    <p> Dernier caractère tapé <span id="ascii"></span></p>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // utlisation de keydown et keyup
+            /*$('#prenom').keydown(function(){
+                $(this).css('background-color','#69c');
+            });
+
+            $('#prenom').keyup(function(){
+                $(this).css('background-color','#c72');
+            });*/
+
+            $('#prenom').keypress(function(e){
+                var touche = String.fromCharCode(e.which);
+                $('#ascii').text(touche);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

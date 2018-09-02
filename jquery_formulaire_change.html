@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+    <form action="" id="formulaire">
+        <select name="liste" id="liste">
+            <option value="c1" selected='selected'> Choix1</option>
+            <option value="c2"> Choix2</option>
+        </select>
+        <input type="submit" value="envoyer">
+    </form>
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#formulaire').submit(function(){
+                alert('formulaire envoyé');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

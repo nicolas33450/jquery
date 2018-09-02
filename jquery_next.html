@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <div>
+        <h1> manipulation du DOM HTML </h1>
+        <p class="p1"> un premier paragraphe </p>
+        <ul>(liste ul)
+            <li class="li1"> premier element de liste </li>
+            <li> deuxieme element de liste </li>
+            <li> troisieme element de liste </li>
+            <li class="li4"> quatrieme element de liste </li>
+        </ul>
+        <p> un autre paragraphe </p>
+        <p> un troisieme paragraphe </p>
+    </div>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('h1').next().css('color','red');
+            $('.p1').nextAll().css('color','green');
+            $('.li1').nextUntil('.li4').css('color','orange');
+        });
+    </script>
+
+</body>
+
+</html>

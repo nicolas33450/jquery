@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> manipulation du DOM HTML</h1>
+
+    <div id="div1">
+        <button id="btn1"> utiliser append() </button>
+        <button id="btn2"> utiliser prepend() </button>
+    </div>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btn1').click(function () {
+                avecAppend();
+            });
+            $('#btn2').click(function () {
+                avecPrepend();
+            });
+
+            function avecAppend(){
+                var t1 = '<p>paragraphe cree en html<p>';
+                var t2 = $('<p><p>').text('paragraphe cree avec jquery');
+                var t3 = document.createElement('p');
+                t3.innerHTML = 'paragraphe cree avec js';
+                $('#div1').append(t1,t2,t3);
+            }
+
+            function avecPrepend(){
+                var t4 = '<p>paragraphe cree en html<p>';
+                var t5 = $('<p><p>').text('paragraphe cree avec jquery');
+                var t6 = document.createElement('p');
+                t6.innerHTML = 'paragraphe cre avec js';
+                $('#div1').prepend(t4,t5,t6);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

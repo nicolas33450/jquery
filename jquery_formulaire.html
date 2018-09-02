@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+
+    <fieldset id="fld">
+        <label for="prenom"> Entrez votre prénom </label>
+        <input type="text" id="prenom" name="prenom"><br><br>
+
+        <label for="nom"> Entrez votre nom </label>
+        <input type="text" id="nom" name="nom">
+    </fieldset>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // utilisation de focus
+            /*$('#prenom').focus(function () {
+                $(this).css('background-color', 'yellow');
+            });*/
+            
+            //utilisation de focusin
+            /*$('#fld').focusin(function(){
+                $(this).css('background-color','yellow');
+            });*/
+
+            $('#prenom').focusin(function(){
+                $(this).css('background-color','yellow');
+            });
+            $('#prenom').focusout(function(){
+                $(this).css('background-color','red');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

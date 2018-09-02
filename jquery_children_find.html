@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> manipulation du DOM HTML </h1>
+
+    <ul class="l1">
+        <li class="li1"> Premeir element de liste </li>
+        <li> Deuxieme element de liste
+            <ul class="l2">
+                <li> element 1 de sous liste </li>
+                <li> element 2 de sous liste </li>
+                <li> element 3 de sous liste </li>
+            </ul>
+        </li>
+        <li> troisieme element de liste </li>
+    </ul>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //methode children
+            //$('.l1').children('.li1').css('color','red');
+
+            //methode find
+            $('.l1').find('*').css('color','red');
+        });
+    </script>
+
+</body>
+
+</html>

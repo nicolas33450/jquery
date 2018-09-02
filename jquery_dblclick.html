@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+
+    <p class="p1"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestiae nisi maiores magni, dolorem
+        itaque, architecto dolores ipsum quam quibusdam harum odit expedita corrupti? Eaque quos quasi autem neque tempore.</p>
+
+    <p class="p2">Ea et tempor id officia cupidatat ea amet commodo. Ut voluptate quis minim laborum eu duis do magna et
+        deserunt quis. Officia excepteur mollit nisi Lorem ad amet eu sit aliqua sunt magna.</p>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.p2').hide();
+
+            /*$('.p1').mouseenter(function(){
+                $('.p2').show();
+            })
+            $('.p1').mouseleave(function(){
+                $('.p2').hide();
+            })*/
+
+            // hover remplace mouseenter et mouseleave//
+
+            /*$('.p1').hover(
+                function () {
+                    $('.p2').show();
+                },
+                function () {
+                    $('.p2').hide();
+                }
+            )*/
+            
+            // utlisation de mousedown et mouseup//
+
+            $('.p1').mousedown(function(){
+                $('.p2').show();
+            });
+            $('.p1').mouseup(function(){
+                $('.p2').hide();
+            });
+
+        });
+
+    </script>
+</body>
+</html>

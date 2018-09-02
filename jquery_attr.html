@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1 class="titre"> Decouverte de jquery </h1>
+    <h2 class="titre2"> Utilisation de attr() </h2>
+    <a> un lien </a><br>
+
+    <span id="test"></span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+            //on recupere la valeur de l'attribut class de h1 
+            var atth1 = $('h1').attr('class');
+            //on affiche cete valeur dans notre span
+            $('#test').text('Valeur de class de h1 : ' + atth1);
+
+            //on modifie la valeur associe a l'attribut de class h2
+            $('h2').attr('class','titre');
+
+            /*on defini 2 attributs href et target pour a
+            et on leur attirbue des valeurs*/
+            $('a').attr({
+                href: 'http://amazon.fr',
+                target: '_blank'
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> manipulation du DOM HTML </h1>
+    <label for="c"> Cochez / Decochez lacase </label>
+    <input type="checkbox" id="c" checked="checked"><br>
+
+    <span id="test"></span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+           $('#c').change(function(){
+               var v = $(this);
+               $('#test').html(
+                   'Valeur attribut : ' + v.attr('checked') + 
+                   '<br>Valeur propriete : ' + v.prop('checked')
+               );
+           });
+        });
+    </script>
+
+</body>
+
+</html>

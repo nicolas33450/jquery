@@ -1,0 +1,46 @@
+.p1{
+    border: 1px solid black;
+}
+.p2{
+    border: 1px solid red;
+}
+.div1{
+    border: 1px solid green;
+}
+/*span,html,h1,ul,li,body{
+    color: black;
+    border: 2px solid green;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+}*/
+
+/*methode children
+/*span,html,h1,ul,li,body{
+    color: black;    
+}*/
+
+/*methode siblings*/
+/*h1,p,ul,li{
+    color: black;
+}*/
+
+/*table{
+    border-collapse: collapse;
+}
+th,td{
+    border: 2px solid black;
+    padding: 5px;
+}*/
+
+div{
+   margin: 10px;
+}
+#div1{
+    border: 2px solid black;
+}
+#div2{
+    border: 2px solid green;
+}
+
+

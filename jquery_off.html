@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+    
+    <button id="b1"> pas de clic possible </button>
+    <button id="b2"> ajout de gestionnaire d'evenement click </button>
+    <button id="b3"> suppression de gestionnaire d'evenemtn click </button>
+    <span id="msg"> bouton cliqué </span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            
+            $('#msg').hide();
+
+            $('#b2').click(function(){
+                $('#b1').on('click',function(){
+                    $('#msg').show();
+                });
+                $('#b1').text('vous pouvez maintenant me cliquer');
+            });
+
+            $('#b3').click(function(){
+                $('#b1').off('click');
+                $('#b1').text('plus de clic possible');
+            });
+                
+        });
+    </script>
+
+</body>
+
+</html>

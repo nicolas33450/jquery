@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de <mark> jquery </mark> </h1>
+
+    <span id="test"></span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //settter 50px
+            //$('h1').css('font-size', '50px');
+
+            //on recupere la taille de notre titre h1
+            //var taille = $('h1').css('font-size');
+
+            //on affiche la valeur recupere
+            //$('#test').text(taille);
+
+            //get avec text
+            /*var titre = $('h1').text();
+            $('h1').text('<mark>jquery<mark/> manipulé !');
+            $('#test').text(titre);*/
+
+            //get avec html
+            var titre = $('h1').html();
+            $('h1').html('<mark>jquery</mark> manipulé !');
+            $('#test').html(titre);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+
+    <label for="focus"> champs a focus </label>
+    <input type="text" placeholder="je veux le focus" id="focus">
+
+    <button id="trg"> forcer le focus avec trigger</button>
+    <button id="trgh"> forcer le focus avec triggerhandler</button>
+
+    <span id="msg"></span>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#trg').click(function () {
+                //focus direct dans le input
+                $('#focus').trigger('focus');
+            });
+
+            //pas de focus direct dans le input
+            $('#trgh').click(function () {
+                $('#focus').triggerHandler('focus');
+            });
+
+            $('#focus').focus(function () {
+                $('#msg').text('évènement focus declenché');
+            })
+        });
+    </script>
+
+</body>
+
+</html>

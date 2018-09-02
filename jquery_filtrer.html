@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> manipulation du DOM HTML</h1>
+    <ul>
+        <li> element 1 del a liste</li>
+        <li> element 2 del a liste</li>
+        <li> element 3 del a liste</li>
+        <li> element 4 del a liste</li>
+    </ul>
+    <table>
+        <tr>
+            <th> prenom</th>
+            <th> nom</th>
+        </tr>
+        <tr>
+            <td> pierre</td>
+            <td> giraud</td>
+        </tr>
+        <tr>
+            <td> victor</td>
+            <td> durand</td>
+        </tr>
+        <tr>
+            <td> pauline</td>
+            <td> joly</td>
+        </tr>
+    </table>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //cibler different paragraphe avec first
+            //$('p').first().css('color','red');
+            //$('p').last().css('color','orange');
+
+            //cibler avec eq
+            //$('p').eq(1).css('color','red');
+            //$('p').eq(-2).css('color','green');
+
+            //cibler avec filter even = pair / odd = impair
+            //$('li').filter(':nth-child(even)').css('color', 'red');
+            //$('tr').filter(':nth-child(odd)').css('background-color', 
+            //'green');
+
+            //cibler avec not
+            $('li').not(':nth-child(even)').css('color', 'red');
+            $('tr').not(':nth-child(odd)').css('background-color', 
+            'green');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> Decouverte de jquery </h1>
+    <p> Lorem, ipsum dolor sit amet
+         consectetur adipisicing elit.
+          Accusamus molestiae nisi maiores 
+          magni, dolorem itaque, architecto 
+          dolores ipsum quam quibusdam harum 
+          odit expedita corrupti? Eaque quos 
+          quasi autem neque tempore.</p>
+    <p>Ea et tempor id officia cupidatat ea amet commodo. Ut voluptate quis minim laborum eu duis do magna et deserunt quis. Officia excepteur mollit nisi Lorem ad amet eu sit aliqua sunt magna.</p>
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //jquery renvoit un objet et 
+            //la methode hide est appliquer sur l'objet jquery
+            $('.para').hide();
+                    //fonction anonyme
+            $('p').click(function(){
+                //this fait référence a l'élement ciblé 
+                //ici c'est 'p'
+                $(this).hide();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

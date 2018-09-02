@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.css">
+
+    <title> Jquery </title>
+</head>
+
+<body>
+    <h1> manipulation du DOM HTML</h1>
+
+    <div id="div1">
+        <p> premier paragraphe du div 1 </p>
+        <p> deuxieme paragraphe du div 1 </p>
+    </div>
+
+    <div id="div2">
+        <p> premier paragraphe du div 2 </p>
+        <p> deuxieme paragraphe du div 2 </p>
+    </div>
+
+    <button id="btn1"> supprimer le div 1 </button>    
+    <button id="btn2"> supprimer les enfants du  div 2 </button>
+
+
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+
+            // methode remove
+            $('#btn1').click(function(){
+                $('div').remove('#div1');
+            });
+            /*$('#btn2').click(function(){
+                $('div').remove('#div2');
+            });*/
+            
+            // methode empty
+             $('#btn2').click(function(){
+                $('#div2').empty();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
